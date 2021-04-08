@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>SMOOTHLIB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<body>
+<div class="f-wrapper">
+    <div class="navigation-bar d-flex f-a-center w-100 b-box">
+        <div class="logo text-main position-relative">SMOOTHLIB</div>
+        <div class="r-navigation-bar">
+            <div class="text-main pl-10 ">
+                <i class="fas fa-bars pointer r-icon position-absolute" onClick="toggleActive()"></i>
+                <div id="navList" class="hidden">
+                    <div class="w-100"><a href="#alerts" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Alerts</a></div>
+                    <div class="w-100"><a href="#buttons" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0 w-100">Buttons</a></div>
+                    <div class="w-100"><a href="#cards" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Cards</a></div>
+                    <div class="w-100"><a href="#lists" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Lists</a></div>
+                    <div class="w-100"><a href="#navbars" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Navbars</a></div>
+                    <div class="w-100"><a href="#inputs" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Inputs</a></div>
+                    <div class="w-100"><a href="#pagination" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Pagination</a></div>
+                    <div class="w-100"><a href="#progress" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Progress</a></div>
+                    <div class="w-100"><a href="#loaders" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Loaders</a></div>
+                    <div class="w-100"><a href="#positioning" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Positioning</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="inner-wrapper b-box">
+        <div class="side-menu b-box">
+            <div class="text-font-14 text-w-400 text-main side-menu-h1 mb-5">Menu</div>
+            <div class="w-100"><a href="#alerts" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Alerts</a></div>
+            <div class="w-100"><a href="#buttons" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0 w-100">Buttons</a></div>
+            <div class="w-100"><a href="#cards" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Cards</a></div>
+            <div class="w-100"><a href="#lists" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Lists</a></div>
+            <div class="w-100"><a href="#navbars" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Navbars</a></div>
+            <div class="w-100"><a href="#inputs" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Inputs</a></div>
+            <div class="w-100"><a href="#pagination" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Pagination</a></div>
+            <div class="w-100"><a href="#progress" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Progress Bars</a></div>
+            <div class="w-100"><a href="#loaders" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Loaders</a></div>
+            <div class="w-100"><a href="#positioning" class="m-2 side-menu-item text-font-14 text-main text-w-200 mr-0 ml-0">Positioning</a></div>
+        </div>
+        <div class="content-container ml-20">
+            <div id="alerts" class="content d-flex f-col w-100 mb-20">
+                <div class="text-font-14 text-w-400 text-main side-menu-h1 mb-20">ALERTS</div>
+                <div class="text-font-14 text-w-300 text-main text-padding mb-20">
+                    Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+                </div>
+                <div class="example-container b-box mb-20">
+                    <div class="alert-red mb-10">
+                        You can use this alert for error/warning messages.
+                    </div>
+                    <div class="alert-green mb-10">
+                        You can use this alert for success messages.
+                    </div>
+                    <div class="alert-blue">
+                        You can use this alert for typical messages.
+                    </div>
+                </div>
+                <div class="mb-20 text-font-12 text-w-300 text-main text-padding">
+                    HTML:
+                </div>
+                <div class="html-container b-box mb-20 text-font-14 text-w-300 text-main">
+                    <div class="mb-10">
+                        &lt;div class=&quot;alert-red&quot;&gt;<br />
+                        You can use this alert for error/warning messages.<br />
+                        &lt;/div&gt;
+                    </div>
+                    <div class="mb-10">
+                        &lt;div class=&quot;alert-green&quot;&gt;<br />
+                        You can use this alert for success messages.<br />
+                        &lt;/div&gt;
+                    </div>
+                    <div class="mb-10">
+                        &lt;div class=&quot;alert-blue&quot;&gt;<br />
+                        You can use this alert for typical messages.<br />
+                        &lt;/div&gt;
+                    </div>
+                </div>
+            </div>
+            <div id="buttons" class="content d-flex f-col w-100 mb-20">
+                <div class="text-font-14 text-w-400 text-main side-menu-h1 mb-20">BUTTONS</div>
+                <div class="text-font-14 text-w-300 text-main text-padding mb-20">Use SmoothLib custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</div>
+                <div class="example-container b-box mb-20 d-flex f-row f-j-between">
+                    <button class="btn btn-red">
+                        Error
+                    </button>
+                    <button class="btn btn-green">
+                        Success
+                    </button>
+                    <button class="btn btn-black">
+                        Black
+                    </button>
+                    <button class="btn btn-smooth">
+                        Smooth
+                    </button>
+                    <button class="btn btn-no-bg">
+                        No background
+                    </button>
+                </div>
+                <div class="mb-20 text-font-12 text-w-300 text-main text-padding">HTML:</div>
+                <div class="html-container b-box mb-20 text-font-14 text-w-300 text-main">
+                    <div class="mb-10">
+                        &lt;button class=&quot;btn btn-red&quot;&gt;<br />
+                        Error<br />
+                        &lt;/button&gt;
+                    </div>
+                    <div class="mb-10">
+                        &lt;button class=&quot;btn btn-green&quot;&gt;<br />
+                        Success<br />
+                        &lt;/button&gt;
+                    </div>
+                    <div class="mb-10">
+                        &lt;button class=&quot;btn btn-black&quot;&gt;<br />
+                        Black<br />
+                        &lt;/button&gt;
+                    </div>
+                    <div class="mb-10">
+                        &lt;button class=&quot;btn btn-no-bg&quot;&gt;<br />
+                        Smooth<br />
+                        &lt;/button&gt;
+                    </div>
+                    <div class="mb-10">
+                        &lt;button class=&quot;btn btn-red&quot;&gt;<br />
+                        No background<br />
+                        &lt;/button&gt;
+                    </div>
+                </div>
+            </div>
+            <div id="cards" class="content d-flex f-col w-100 mb-20">
+                <div class="text-font-14 text-w-400 text-main side-menu-h1 mb-20">CARDS</div>
+                <div class="text-font-14 text-w-300 text-main text-padding mb-20">SmoothLib cards provide a flexible and extensible content container with multiple variants and options.</div>
+                <div class="example-container b-box mb-20 d-flex f-row f-j-around">
+                    <div class="card card-basic">
+                        <img src="https://fsa.zobj.net/crop.php?r=S7hthRVOX38U5Dm3fvPzFPttqrkJvfZ-mLzsM4cAN7A96oXCBgvPJbR_0rLPcLiJ6dm9epjRPX5dTizE7BELE8qE14LoYkfbEv41gyKNuB01o66FvyBbcyl8iSBIgtyqtkBV2ol21II-6nE6">
+                        <div class="d-flex f-j-center mt-15 mb-15">
+                            <div class="card-title">Card title</div>
+                        </div>
+                        <div class="card-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ipsa.
+                        </div>
+                    </div>
+                    <div class="card card-smooth f-j-around mb-20 r-mb-unset">
+                        <img src="https://fsa.zobj.net/crop.php?r=S7hthRVOX38U5Dm3fvPzFPttqrkJvfZ-mLzsM4cAN7A96oXCBgvPJbR_0rLPcLiJ6dm9epjRPX5dTizE7BELE8qE14LoYkfbEv41gyKNuB01o66FvyBbcyl8iSBIgtyqtkBV2ol21II-6nE6">
+                        <div>
+                            <div class="text-w-500 mt-15 mb-15">Card title</div>
+                            <div class="text-w-400 text-font-12">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, nostrum.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-20 text-font-12 text-w-300 text-main text-padding">HTML:</div>
+                <div class="html-container b-box mb-20 text-font-14 text-w-300 text-main">
+                    <div class="mb-10">
+                        &lt;div class=&quot;card card-basic&quot;&gt;<br />
+                        &lt;img src=&quot;...&quot;&gt;<br />
+                        &lt;div class=&quot;d-flex f-j-center mt-15 mb-15&quot;&gt;<br />
+                        &lt;div class=&quot;card-title&quot;&gt;Card title&lt;/div&gt;<br />
+                        &lt;/div&gt;<br />
+                        &lt;div class=&quot;card-content&quot;&gt;<br />
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ipsa.<br />
+                        &lt;/div&gt;<br />
+                        &lt;/div&gt;
+                    </div>
+                    <div class="mb-10">
+                        &lt;div class=&quot;card card-smooth f-j-around mb-20&quot;&gt;<br />
+                        &lt;img src=&quot;...&quot;&gt;<br />
+                        &lt;div&gt;<br />
+                        &lt;div class=&quot;text-w-500 mt-15 mb-15&quot;&gt;Card title&lt;/div&gt;<br />
+                        &lt;div class=&quot;text-w-400 text-font-12&quot;&gt;<br />
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, nostrum.<br />
+                        &lt;/div&gt;<br />
+                        &lt;/div&gt;<br />
+                        &lt;/div&gt;
+                    </div>
+                </div>
+            </div>
+            <div id="lists" class="content d-flex f-col w-100 mb-20">
+                <div class="text-font-14 text-w-400 text-main side-menu-h1 mb-20">LISTS</div>
+                <div class="text-font-14 text-w-300 text-main text-padding mb-20">List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.</div>
+                <div class="example-container b-box mb-20 d-flex f-j-center">
+                    <ul class="list-group">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">A fourth item</li>
+                        <li class="list-group-item">And a fifth one</li>
+                    </ul>
+                </div>
+                <div class="mb-20 text-font-12 text-w-300 text-main text-padding">
+                    HTML:
+                </div>
+                <div class="html-container b-box mb-20 text-font-14 text-w-300 text-main">
+                    <div class="mb-10">
+                        &lt;ul class=&quot;list-group&quot;&gt;<br />
+                        &lt;li class=&quot;list-group-item&quot;&gt;An item&lt;/li&gt;<br />
+                        &lt;li class=&quot;list-group-item&quot;&gt;A second item&lt;/li&gt;<br />
+                        &lt;li class=&quot;list-group-item&quot;&gt;A third item&lt;/li&gt;<br />
+                        &lt;li class=&quot;list-group-item&quot;&gt;A fourth item&lt;/li&gt;<br />
+                        &lt;li class=&quot;list-group-item&quot;&gt;And a fifth one&lt;/li&gt;<br />
+                        &lt;/ul&gt;
+                    </div>
+                </div>
+            </div>
+            <div id="navbars" class="content d-flex f-col w-100 mb-20">
+                <div class="text-font-14 text-w-400 text-main side-menu-h1 mb-20">Navbars</div>
+                <div class="text-font-14 text-w-300 text-main text-padding mb-20">
+                    Documentation and examples for SmoothLib powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
+                </div>
+                <div class="example-container b-box mb-20">
+                    <div class="navbar mb-10">
+                        <div class="navbar-logo">Logo</div>
+                        <div class="navbar-links-box">
+                            <a href="">Link</a>
+                            <a href="">Link</a>
+                            <a href="">Link</a>
+                            <a href="">Link</a>
+                            <a href="">Link</a>
+                        </div>
+                    </div>
+                    <div class="navbar navbar-smooth bg-black">
+                        <div class="navbar-logo text-main ">Logo</div>
+                        <div class="navbar-links-box">
+                            <a href="">Link</a>
+                            <a href="">Link</a>
+                            <a href="">Link</a>
+                            <a href="">Link</a>
+                            <a href="">Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-20 text-font-12 text-w-300 text-main text-padding">
+                    HTML:
+                </div>
+                <div class="html-container b-box mb-20 text-font-14 text-w-300 text-main">
+                    <div class="mb-10">
+                        &lt;div class=&quot;navbar&quot;&gt;<br />
+                        &lt;div class=&quot;navbar-logo&quot;&gt;Logo&lt;/div&gt;<br />
+                        &lt;div class=&quot;navbar-links-box&quot;&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;<br />
+                        &lt;/div&gt;<br />
+                        &lt;/div&gt;
+                    </div>
+                    <div>
+                        &lt;div class=&quot;navbar navbar-smooth bg-black&quot;&gt;<br />
+                        &lt;div class=&quot;navbar-logo text-main &quot;&gt;Logo&lt;/div&gt;<br />
+                        &lt;div class=&quot;navbar-links-box&quot;&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;<br />
+                        &lt;/div&gt;<br />
+                        &lt;/div&gt;
+                    </div>
+                </div>
+
+            </div>
+            <div id="inputs" class="content d-flex f-col w-100 mb-20">
+                <div class="text-font-14 text-w-400 text-main side-menu-h1 mb-20">INPUTS</div>
+                <div class="text-font-14 text-w-300 text-main text-padding mb-20">
+                    SmoothLib inputs are extremely easy to use for validation. Every input has <span class="parameters-red">width: 100%;</span>
+                </div>
+                <div class="example-container b-box mb-20">
+                    <input type="text" class="input m-2">
+                    <input type="text" class="input input-red m-2">
+                    <input type="text" class="input input-green m-2">
+                    <input type="text" class="input input-black m-2">
+                    <input type="text" class="input input-smooth m-2">
+                </div>
+                <div class="mb-20 text-font-12 text-w-300 text-main text-padding">
+                    HTML:
+                </div>
+                <div class="html-container b-box mb-20 text-font-14 text-w-300 text-main">
+                    <div class="mb-10">
+                        &lt;input type=&quot;text&quot; class=&quot;input&quot;&gt;<br />
+                        &lt;input type=&quot;text&quot; class=&quot;input input-red&quot;&gt;<br />
+                        &lt;input type=&quot;text&quot; class=&quot;input input-green&quot;&gt;<br />
+                        &lt;input type=&quot;text&quot; class=&quot;input input-black&quot;&gt;<br />
+                        &lt;input type=&quot;text&quot; class=&quot;input input-smooth&quot;&gt;
+                    </div>
+                </div>
+            </div>
+            <div id="pagination" class="content d-flex f-col w-100 mb-20">
+                <div class="text-font-14 text-w-400 text-main side-menu-h1 mb-20">PAGINATION</div>
+                <div class="text-font-14 text-w-300 text-main text-padding mb-20">
+                    Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.
+                </div>
+                <div class="example-container b-box mb-20 d-flex f-j-center f-a-center">
+                    <div class="pagination">
+                        <div class="pagination-item">
+                            <a href="">Previous</a>
+                        </div>
+                        <div class="pagination-item">
+                            <a href="">1</a>
+                        </div>
+                        <div class="pagination-item">
+                            <a href="">2</a>
+                        </div>
+                        <div class="pagination-item">
+                            <a href="">3</a>
+                        </div>
+                        <div class="pagination-item">
+                            <a href="">Next</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-20 text-font-12 text-w-300 text-main text-padding">
+                    HTML:
+                </div>
+                <div class="html-container b-box mb-20 text-font-14 text-w-300 text-main">
+                    <div class="mb-10">
+                        &lt;div class=&quot;pagination&quot;&gt;<br />
+                        &lt;div class=&quot;pagination-item&quot;&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;Previous&lt;/a&gt;<br />
+                        &lt;/div&gt;<br />
+                        &lt;div class=&quot;pagination-item&quot;&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;1&lt;/a&gt;<br />
+                        &lt;/div&gt;<br />
+                        &lt;div class=&quot;pagination-item&quot;&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;2&lt;/a&gt;<br />
+                        &lt;/div&gt;<br />
+                        &lt;div class=&quot;pagination-item&quot;&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;3&lt;/a&gt;<br />
+                        &lt;/div&gt;<br />
+                        &lt;div class=&quot;pagination-item&quot;&gt;<br />
+                        &lt;a href=&quot;&quot;&gt;Next&lt;/a&gt;<br />
+                        &lt;/div&gt;<br />
+                        &lt;/div&gt;
+                    </div>
+                </div>
+            </div>
+            <div id="progress"  class="content d-flex f-col w-100 mb-20">
+                <div class="text-font-14 text-w-400 text-main side-menu-h1 mb-20">PROGRESS</div>
+                <div class="text-font-14 text-w-300 text-main text-padding mb-20">
+                    Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+                </div>
+                <div class="example-container b-box mb-20">
+                    <div class="progress progress-smooth mb-5">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="progress progress-basic">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="mb-20 text-font-12 text-w-300 text-main text-padding">
+                    HTML:
+                </div>
+                <div class="html-container b-box mb-20 text-font-14 text-w-300 text-main">
+                    <div class="mb-10">
+                        &lt;div class=&quot;progress progress-smooth&quot;&gt;<br />
+                        &lt;div class=&quot;progress-bar&quot;&gt;&lt;/div&gt;<br />
+                        &lt;/div&gt;
+                    </div>
+                    <div class="mb-10">
+                        &lt;div class=&quot;progress progress-basic&quot;&gt;<br />
+                        &lt;div class=&quot;progress-bar&quot;&gt;&lt;/div&gt;<br />
+                        &lt;/div&gt;
+                    </div>
+                </div>
+            </div>
+            <div id="loaders"  class="content d-flex f-col w-100 mb-20">
+                <div class="text-font-14 text-w-400 text-main side-menu-h1 mb-20">LOADERS</div>
+                <div class="text-font-14 text-w-300 text-main text-padding mb-20">
+                    Indicate the loading state of a component or page with SmoothLib loaders, built entirely with HTML, CSS, and no JavaScript.
+                </div>
+                <div class="example-container b-box mb-20 d-flex f-a-center f-j-around">
+                    <div class="loader"></div>
+                    <div class="loader loader-smooth"></div>
+                    <div class="loader loader-black"></div>
+                    <div class="loader loader-red"></div>
+                    <div class="loader loader-green"></div>
+                </div>
+                <div class="mb-20 text-font-12 text-w-300 text-main text-padding">
+                    HTML:
+                </div>
+                <div class="html-container b-box mb-20 text-font-14 text-w-300 text-main">
+                    <div class="mb-10">
+                        &lt;div class=&quot;loader&quot;&gt;&lt;/div&gt;
+                    </div>
+                    <div class="mb-10">
+                        &lt;div class=&quot;loader loader-smooth&quot;&gt;&lt;/div&gt;
+                    </div>
+                    <div class="mb-10">
+                        &lt;div class=&quot;loader loader-black&quot;&gt;&lt;/div&gt;
+                    </div>
+                    <div class="mb-10">
+                        &lt;div class=&quot;loader loader-red&quot;&gt;&lt;/div&gt;
+                    </div>
+                    <div class="mb-10">
+                        &lt;div class=&quot;loader loader-green&quot;&gt;&lt;/div&gt;
+                    </div>
+                </div>
+            </div>
+            <div id="positioning"  class="content d-flex f-col w-100 mb-20">
+                <div class="text-font-14 text-w-400 text-main side-menu-h1 mb-20">POSITIONING</div>
+                <div class="text-font-14 text-w-300 text-main text-padding mb-20">
+                    SmoothLibs allows you to position your elements by <span class="parameters-red">display: flex;</span>, you can add <span class="parameters-red">text-color</span> or <span class="parameters-red">border-color</span>, set <span class="parameters-red">width</span> or <span class="parameters-red">height</span>, choose <span class="parameters-red">background color</span>also you can create some space with <span class="parameters-red">margins</span> and <span class="parameters-red">paddings</span>. All classes list:
+                </div>
+                <div class="classes-container mb-20">
+                    <div class="c-c-header text-main text-font-14 text-w-400 mb-15">FLEXBOX</div>
+                    <div class="d-flex f-col">
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">d-flex</span> - <span class="parameters-white">display: flex;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">f-row</span> - <span class="parameters-white">flex-flow: row;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">f-col</span> - <span class="parameters-white">flex-flow: column;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">f-j-center</span> - <span class="parameters-white">justify-content: center;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">f-a-center </span> - <span class="parameters-white">align-items: center;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">f-j-around</span> - <span class="parameters-white">justify-content: space-around;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">f-j-between</span> - <span class="parameters-white">justify-content: space-between;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">f-j-flex-end</span> - <span class="parameters-white">justify-content: flex-end;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">f-j-flex-start</span> - <span class="parameters-white">justify-content: flex-start;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">f-a-flex-end</span> - <span class="parameters-white">align-items: flex-end;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">f-a-flex-start</span> - <span class="parameters-white">align-items: flex-start;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">f-grow-1</span> - <span class="parameters-white">flex-grow: 1;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="classes-container mb-20">
+                    <div class="c-c-header text-main text-font-14 text-w-400 mb-15">TEXT-COLOR</div>
+                    <div class="d-flex f-col">
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">text-white</span> - <span class="parameters-white">color: #ffffff;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">text-main</span> - <span class="parameters-white">color: #359992;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">text-green</span> - <span class="parameters-white">color: #1eb562;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">text-red</span> - <span class="parameters-white">color: #be2525;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="classes-container mb-20">
+                    <div class="c-c-header text-main text-font-14 text-w-400 mb-15">border-color</div>
+                    <div class="d-flex f-col">
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">border</span> - <span class="parameters-white">border: 1px solid #359992;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">border-green</span> - <span class="parameters-white"> border: 1px solid #1eb562;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">border-red</span> - <span class="parameters-white">border: 1px solid #be2525;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">border-white</span> - <span class="parameters-white">border: 1px solid #ffffff;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="classes-container mb-20">
+                    <div class="c-c-header text-main text-font-14 text-w-400 mb-15">WIDTH</div>
+                    <div class="d-flex f-col">
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">w-20</span> - <span class="parameters-white">width: 18%;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">w-30</span> - <span class="parameters-white">width: 28%;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">w-50</span> - <span class="parameters-white">width: 48%;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">w-100</span> - <span class="parameters-white">width: 100%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="classes-container mb-20">
+                    <div class="c-c-header text-main text-font-14 text-w-400 mb-15">HEIGHT</div>
+                    <div class="d-flex f-col">
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">h-20</span> - <span class="parameters-white">height: 18%;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">h-30</span> - <span class="parameters-white">height: 28%;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">h-50</span> - <span class="parameters-white">height: 48%;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">h-100</span> - <span class="parameters-white">height: 100%;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">h-auto</span> - <span class="parameters-white">height: auto;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="classes-container mb-20">
+                    <div class="c-c-header text-main text-font-14 text-w-400 mb-15">BACKGROUND COLOR</div>
+                    <div class="d-flex f-col">
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">bg-main</span> - <span class="parameters-white">background-color: #0b2328;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">bg-green</span> - <span class="parameters-white">background-color: #1eb562;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">bg-red</span> - <span class="parameters-white">background-color: #be2525;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">bg-grey</span> - <span class="parameters-white">background-color: #989898;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">bg-black</span> - <span class="parameters-white">background-color: #020202;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="classes-container mb-20">
+                    <div class="c-c-header text-main text-font-14 text-w-400 mb-15">MARGINS</div>
+                    <div class="d-flex f-col">
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">m-5</span> - <span class="parameters-white">margin: 5px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">m-10</span> - <span class="parameters-white">margin: 10px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">m-15</span> - <span class="parameters-white">margin: 15px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">m-20</span> - <span class="parameters-white">margin: 20px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">mt-5</span> - <span class="parameters-white">margin-top: 5px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">mt-10</span> - <span class="parameters-white">margin-top: 10px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">mt-15</span> - <span class="parameters-white">margin-top: 15px;</span>
+                        </div>
+
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">mt-20</span> - <span class="parameters-white">margin-top: 20px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">mb-5</span> - <span class="parameters-white">margin-bottom: 5px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">mb-10</span> - <span class="parameters-white">margin-bottom: 10px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">mb-15</span> - <span class="parameters-white">margin-bottom: 15px;</span>
+                        </div>
+
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">mb-20</span> - <span class="parameters-white">margin-bottom: 20px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">mr-0</span> - <span class="parameters-white">margin-right: 0 !important;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">mr-5</span> - <span class="parameters-white">margin-right: 5px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">mr-10</span> - <span class="parameters-white">margin-right: 10px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">mr-15</span> - <span class="parameters-white">margin-right: 15px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">mr-20</span> - <span class="parameters-white">margin-right: 20px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">ml-0</span> - <span class="parameters-white">margin-left: 0 !important;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">ml-5</span> - <span class="parameters-white">margin-left: 5px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">ml-10</span> - <span class="parameters-white">margin-left: 10px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">ml-15</span> - <span class="parameters-white">margin-left: 15px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">ml-20</span> - <span class="parameters-white">margin-left: 20px</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="classes-container mb-20">
+                    <div class="c-c-header text-main text-font-14 text-w-400 mb-15">PADDING</div>
+                    <div class="d-flex f-col">
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">p-5</span> - <span class="parameters-white">padding: 5px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">p-10</span> - <span class="parameters-white">padding: 10px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">p-15</span> - <span class="parameters-white">padding: 15px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">p-20</span> - <span class="parameters-white">padding: 20px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pt-5</span> - <span class="parameters-white">padding-top: 5px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pt-10</span> - <span class="parameters-white">padding-top: 10px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pt-15</span> - <span class="parameters-white">padding-top: 15px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pt-20</span> - <span class="parameters-white">padding-top: 20px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pb-5</span> - <span class="parameters-white">padding-bottom: 5px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pb-10</span> - <span class="parameters-white">padding-bottom: 10px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pb-15</span> - <span class="parameters-white">padding-bottom: 15px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pb-20</span> - <span class="parameters-white">padding-bottom: 20px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pr-5</span> - <span class="parameters-white">padding-right: 5px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pr-10</span> - <span class="parameters-white">padding-right: 10px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pr-15</span> - <span class="parameters-white">padding-right: 15px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pr-20</span> - <span class="parameters-white">padding-right: 20px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pl-5</span> - <span class="parameters-white">padding-left: 5px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pl-10</span> - <span class="parameters-white">padding-left: 10px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pl-15</span> - <span class="parameters-white">padding-left: 15px;</span>
+                        </div>
+                        <div class="c-c-item mb-5">
+                            <span class="parameters-red">pl-20</span> - <span class="parameters-white">padding-left: 20px;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyrights-bar d-flex f-a-center f-j-center w-100 b-box">
+        <div class="text-main text-w-200 text-font-14">&copy; seekingperfectiontr@gmail.com, <span class="text-w-400 text-main">2021</span></div>
+    </div>
+</div>
+<script>
+    function toggleActive() {
+        let el = document.getElementById("navList");
+        el.classList.toggle("active");
+        console.log(el);
+    }
+</script>
+
+</body>
+</html>
